@@ -5,33 +5,33 @@ const Destinations: React.FC = () => {
   const countries = [
     { 
       name: 'Togo', 
-      site: 'Cascade de Kpimé',
+      site: 'Cathédrale du Sacré Coeur',
       code: 'tg', 
-      img: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=800' 
+      img: 'https://i.pinimg.com/736x/b3/9d/84/b39d845f5f7a27dbcb1fe40f42c48a99.jpg' 
     },
     { 
       name: 'Bénin', 
       site: 'Village Lacustre Ganvié',
       code: 'bj', 
-      img: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&q=80&w=800' 
+      img: 'https://i.pinimg.com/736x/a1/d1/ec/a1d1ec902266002f59a2ed439ae77fce.jpg' 
     },
     { 
       name: 'Ghana', 
-      site: 'Château de Cape Coast',
+      site: 'Freedom and justice',
       code: 'gh', 
-      img: 'https://images.unsplash.com/photo-1565152314545-0d0277259f93?auto=format&fit=crop&q=80&w=800' 
+      img: 'https://i.pinimg.com/736x/cd/ac/6d/cdac6dbb1cd3f02a50254d71e0b3a8f6.jpg' 
     },
     { 
       name: 'Burkina Faso', 
       site: 'Pics de Sindou',
       code: 'bf', 
-      img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800' 
+      img: 'https://i.pinimg.com/736x/f3/b5/4e/f3b54e5fc84d664a838659516d3874cd.jpg' 
     },
     { 
       name: 'Côte d\'Ivoire', 
-      site: 'Basilique Yamoussoukro',
+      site: 'Pont Alassane OUTARA',
       code: 'ci', 
-      img: 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?auto=format&fit=crop&q=80&w=800' 
+      img: 'https://i.pinimg.com/736x/8c/19/3f/8c193f68026841360533f4cdee60ae9c.jpg' 
     },
   ];
 
@@ -39,7 +39,7 @@ const Destinations: React.FC = () => {
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4 animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <h2 className="text-4xl md:text-5xl font-black text-[#2D1B69] uppercase tracking-tighter">Parcourez l'Afrique avec Nagode</h2>
+          <h2 className="text-4xl md:text-5xl font-black text-[#2D1B69] uppercase tracking-tighter">Parcourez l'Afrique avec Nagode Transfert</h2>
           <div className="w-20 h-1.5 bg-[#6F1AAE] mx-auto rounded-full"></div>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed font-medium">
             Découvrez les plus beaux sites touristiques de la sous-région en voyageant avec nos lignes régulières.

@@ -5,27 +5,27 @@ import { Calendar, ArrowRight } from 'lucide-react';
 const newsItems = [
   {
     id: 1,
-    title: "Nouveaux bus VIP dernière génération",
-    excerpt: "Nagode Transfert continue de moderniser sa flotte pour votre confort. Découvrez nos nouveaux bus équipés de climatisation, ports USB et sièges grand confort.",
-    date: "Mars 2025",
-    image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800",
-    category: "Confort"
+    title: "Visite de Tem Alyssi Kozoo à l'agence Nagode Kara",
+    excerpt: "Nous avons eu l'honneur de recevoir une visite prestigieuse ce mois-ci ! Tem Alyssi Kozoo s'est déplacé personnellement à notre agence Nagode Kara pour constater l'évolution de nos services et échanger avec notre équipe sur nos engagements.",
+    date: "Janvier 2026",
+    image: "https://scontent.flfw4-1.fna.fbcdn.net/v/t39.30808-6/608921620_1184820023807856_4952615361479404559_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=QKA2LokeP0sQ7kNvwHffKkl&_nc_oc=AdlDKQZ0UzRgzg7SaDeS6JIWTyX2jUl-CN5Kwr08voWMJ_FCHPLD5Wxws_6Gz1BLAfU&_nc_zt=23&_nc_ht=scontent.flfw4-1.fna&_nc_gid=QTDevu3pI7zz1NpU59Z8Rg&oh=00_AfpdbsBApNuEspVkGOYzYNgSafEvVfg85mpJu17e52Gw_g&oe=6974D6D7",
+    category: "Culture"
   },
   {
     id: 2,
-    title: "Ligne Lomé - Sokodé - Kara renforcée",
+    title: "Nagode transfert au coeur de la tradition",
     excerpt: "Plus de départs quotidiens pour mieux vous servir sur l'axe Nord-Sud. Consultez nos nouveaux horaires en agence ou sur l'application.",
-    date: "Février 2025",
-    image: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800",
-    category: "Réseau"
+    date: "Janvier 2026",
+    image: "https://scontent.flfw4-1.fna.fbcdn.net/v/t39.30808-6/616374688_1189642819992243_8636104606442553471_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Bqk9xbPTm0EQ7kNvwHrQ3-f&_nc_oc=AdnXA2EingymJIu2o9RZYyZ7Nb1WxvQVN-tN4h9yML0YZkGNmNmo8GUulbR8nKAq0FU&_nc_zt=23&_nc_ht=scontent.flfw4-1.fna&_nc_gid=OxspzBpFB6NEdCA6te0tHQ&oh=00_AfoSmbNR0bDUBSnWY3bLGNn2MvKGQKwtL9WdQ8Bfp0oGuw&oe=6974EF10",
+    category: "Fête&Culture"
   },
-  {
+    {
     id: 3,
-    title: "Suivi de colis en temps réel",
-    excerpt: "Notre service de logistique s'améliore ! Vous pouvez désormais appeler nos lignes dédiées pour connaître la position exacte de vos marchandises.",
-    date: "Janvier 2025",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800",
-    category: "Logistique"
+    title: "Une nouvelle agence a Notsè",
+    excerpt: "C'est officiel ! 🚗💨 Nous sommes fier d'annoncer le lancement de l'agence Nagode Notsè, votre nouvelle agence de transport fiable à Notsè. Nous sommes là pour vous déplacer en toute sécurité, ponctualité et confort, au national et a l'international. Un service proche, pour tous vos trajets",
+    date: "Décembre 2025",
+    image: "https://scontent.flfw4-1.fna.fbcdn.net/v/t39.30808-6/599938324_1171023865187472_5908652561230376016_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=MP_dR2yBg1EQ7kNvwGKdnsM&_nc_oc=AdlcbFXmdtYTFoU-1Z0tIfb3P5zjmhqBigsMH4ZlA6RbzapPtVySG3bcp5moAXqESpM&_nc_zt=23&_nc_ht=scontent.flfw4-1.fna&_nc_gid=dSbKFyUqa2lHEjYzMHwpCQ&oh=00_AfoKjvAGIeEI9EZBXiR_3foR008txZB2_uafbBTzt5T-Jg&oe=6974EBC9",
+    category: "Agence"
   }
 ];
 

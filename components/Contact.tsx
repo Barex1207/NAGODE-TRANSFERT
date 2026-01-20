@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle2, MessageSquare, Clock, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, MessageSquare, Clock, Globe, ExternalLink } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [isSent, setIsSent] = useState(false);
@@ -35,10 +34,16 @@ const Contact: React.FC = () => {
     {
       icon: <MapPin className="text-white" size={24} />,
       title: "Siège Social",
-      details: ["Agbalepedou, Lomé", "République Togolaise"],
+      details: ["Agbalepedo, Lomé", "République Togolaise"],
       bg: "bg-black"
     }
   ];
+
+  // VOTRE VRAI LIEN GOOGLE MAPS CORRIGÉ
+  const googleMapsEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.189305893502!2d1.2002649!3d6.1992946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1021599d6d8487e1%3A0xe2f8ba7b21e344fd!2sNAGODE%20Transfert%20-%20Agbalepedo!5e0!3m2!1sen!2stg!4v1620000000000!5m2!1sen!2stg";
+
+  // Lien direct pour ouvrir dans Google Maps
+  const googleMapsDirectUrl = "https://www.google.com/maps/place/NAGODE+Transfert+-+Agbalepedo/@6.1992946,1.2002649,17z/data=!3m1!4b1!4m6!3m5!1s0x1021599d6d8487e1:0xe2f8ba7b21e344fd!8m2!3d6.1992946!4d1.2002649!16s%2Fg%2F11hzpct589?entry=ttu";
 
   return (
     <div className="pt-32 pb-20 bg-brand-light min-h-screen">
@@ -205,17 +210,75 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Map Section */}
-        <div className="mt-20 rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white animate-in fade-in zoom-in-95 duration-1000">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15865.000000000002!2d1.215!3d6.21!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e1c0c0c0c0c1%3A0xc0c0c0c0c0c0c0c!2sLom%C3%A9%2C%20Togo!5e0!3m2!1sen!2stg!4v1620000000000!5m2!1sen!2stg" 
-            width="100%" 
-            height="450" 
-            style={{ border: 0 }} 
-            allowFullScreen={true} 
-            loading="lazy"
-            title="Localisation Nagode Transfert"
-          ></iframe>
+        {/* Map Section - CORRIGÉ avec votre vrai lien */}
+        <div className="mt-20">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h3 className="text-2xl font-black text-[#6F1AAE] uppercase tracking-tighter">Notre localisation</h3>
+              <p className="text-gray-500 font-medium">Nagode Transfert - Agbalepedo, Lomé</p>
+            </div>
+            <a 
+              href={googleMapsDirectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-3 bg-[#6F1AAE] text-white font-bold rounded-2xl hover:bg-[#5A148C] transition-colors shadow-lg"
+            >
+              <ExternalLink size={16} />
+              Ouvrir dans Google Maps
+            </a>
+          </div>
+
+          <div className="rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white animate-in fade-in zoom-in-95 duration-1000">
+            <iframe 
+              src={googleMapsEmbedUrl}
+              width="100%" 
+              height="500"
+              style={{ border: 0 }} 
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Nagode Transfert Agbalepedo - Localisation exacte"
+              aria-label="Carte Google Maps montrant la localisation de Nagode Transfert à Agbalepedo, Lomé"
+            ></iframe>
+          </div>
+
+          {/* Informations de localisation détaillées */}
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 bg-[#6F1AAE]/10 rounded-xl flex items-center justify-center">
+                  <MapPin className="text-[#6F1AAE]" size={20} />
+                </div>
+                <h4 className="font-bold text-gray-900">Adresse</h4>
+              </div>
+              <p className="text-gray-600">Agbalepedo</p>
+              <p className="text-gray-600">Lomé, Togo</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 bg-[#6F1AAE]/10 rounded-xl flex items-center justify-center">
+                  <Clock className="text-[#6F1AAE]" size={20} />
+                </div>
+                <h4 className="font-bold text-gray-900">Horaires</h4>
+              </div>
+              <p className="text-gray-600 font-bold">24h/24</p>
+              <p className="text-gray-500 text-sm">7 jours sur 7</p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 bg-[#6F1AAE]/10 rounded-xl flex items-center justify-center">
+                  <Phone className="text-[#6F1AAE]" size={20} />
+                </div>
+                <h4 className="font-bold text-gray-900">Téléphone agence</h4>
+              </div>
+              <a href="tel:+22871119140" className="text-gray-900 font-bold hover:text-[#6F1AAE] transition-colors">
+                +228 71 11 91 40
+              </a>
+              <p className="text-gray-500 text-sm">Guichet Agbalepedo</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

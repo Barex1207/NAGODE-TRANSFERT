@@ -1,12 +1,12 @@
-
 import React, { useState } from 'react';
-import { Send, CheckCircle2, Mail, User, MessageSquare } from 'lucide-react';
+import { Send, CheckCircle2, Mail, User, MessageSquare, Phone } from 'lucide-react';
 
 const Suggestions: React.FC = () => {
   const [isSent, setIsSent] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '', // CORRIGÉ : 'phone' en minuscule (pas 'Phone')
     message: ''
   });
 
@@ -88,6 +88,28 @@ const Suggestions: React.FC = () => {
                 </div>
               </div>
 
+              {/* TÉLÉPHONE - CORRIGÉ : structure simplifiée */}
+              <div className="space-y-3">
+                <label className="text-[11px] font-black uppercase tracking-[0.25em] text-gray-400 ml-1">
+                  Numéro de Téléphone
+                </label>
+                <div className="relative">
+                  <div className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-300">
+                    <Phone size={18} />
+                  </div>
+                  <input 
+                    type="tel"
+                    placeholder="+228 90 00 00 00"
+                    className="w-full pl-12 pr-4 py-5 bg-gray-50 border border-gray-100 rounded-2xl focus:border-[#6F1AAE] focus:ring-1 focus:ring-[#6F1AAE] outline-none transition-all font-semibold text-gray-700 placeholder:text-gray-300 shadow-sm"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                  />
+                </div>
+                <p className="text-[10px] text-gray-400 font-medium ml-1">
+                  Format : +228 XX XX XX XX
+                </p>
+              </div>
+
               {/* MESSAGE / SUGGESTION / RÉCLAMATION */}
               <div className="space-y-3">
                 <label className="text-[11px] font-black uppercase tracking-[0.25em] text-gray-400 ml-1">
@@ -111,7 +133,7 @@ const Suggestions: React.FC = () => {
                   className="w-full py-6 bg-[#6F1AAE] text-white font-black rounded-[1.5rem] shadow-[0_15px_30px_rgba(111,26,174,0.25)] hover:shadow-[0_20px_40px_rgba(111,26,174,0.4)] hover:bg-[#5A148C] transition-all transform active:scale-[0.98] flex items-center justify-center gap-4 uppercase tracking-[0.25em] text-sm"
                 >
                   <Send size={18} />
-                  Soumettre à Nagode
+                  Soumettre
                 </button>
               </div>
             </form>

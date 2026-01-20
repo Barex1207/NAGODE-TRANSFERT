@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu, ChevronDown, Clock, Tag, X } from 'lucide-react';
 
@@ -11,37 +10,24 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
   const [isVoyagerOpen, setIsVoyagerOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // High-fidelity SVG recreation of the Nagode Logo
-  const LogoEmblem = ({ size = 24, color = "black" }: { size?: number, color?: string }) => (
-    <svg width={size} height={size} viewBox="0 0 100 100" className="transition-transform group-hover:rotate-12 duration-500">
-      <circle cx="50" cy="50" r="44" fill="white" />
-      <circle cx="50" cy="50" r="40" fill="none" stroke={color} strokeWidth="6"/>
-      <rect x="40" y="40" width="20" height="20" fill={color}/>
-      <line x1="50" y1="10" x2="50" y2="90" stroke={color} strokeWidth="6" />
-      <line x1="10" y1="50" x2="90" y2="50" stroke={color} strokeWidth="6" />
-      <rect x="42" y="10" width="16" height="10" fill="white" />
-      <rect x="42" y="80" width="16" height="10" fill="white" />
-      <rect x="10" y="42" width="10" height="16" fill="white" />
-      <rect x="80" y="42" width="10" height="16" fill="white" />
-    </svg>
-  );
+  // VOTRE LOGO
+  const customLogo = "https://nagodetransfert.com/wp-content/uploads/2023/03/FB_IMG_1679044436873-72x72.jpg";
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#6F1AAE] text-white shadow-lg border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-24">
-          {/* Logo Section */}
+          {/* Logo Section - MODIFIÉ avec votre logo */}
           <div 
             className="flex items-center gap-3 cursor-pointer group"
             onClick={() => onNavigate('home')}
           >
             <div className="bg-white p-1 rounded-xl shadow-md transition-all group-hover:scale-105 group-active:scale-95">
-               <div className="flex flex-col items-center leading-none p-1">
-                 <LogoEmblem size={32} />
-                 <span className="text-[#6F1AAE] font-black text-[8px] mt-0.5 tracking-tighter">NAGODE</span>
-                 <div className="w-full h-[0.5px] bg-[#6F1AAE]/20 my-0.5"></div>
-                 <span className="text-[4px] font-bold text-black tracking-[0.1em]">TRANSFERT</span>
-               </div>
+               <img 
+                 src={customLogo} 
+                 alt="Nagode Transfert Logo" 
+                 className="w-10 h-10 object-contain"
+               />
             </div>
             <div className="hidden sm:flex flex-col -space-y-1">
               <span className="text-xl lg:text-2xl font-black tracking-tighter uppercase">Nagode</span>
@@ -49,6 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
             </div>
           </div>
 
+          {/* ... le reste du code reste EXACTEMENT pareil ... */}
           <div className="hidden lg:flex items-center space-x-10 text-sm font-bold">
             <button 
               onClick={() => onNavigate('home')} 

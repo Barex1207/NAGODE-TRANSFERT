@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Shield, Headphones, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
 
@@ -8,20 +7,8 @@ interface FooterProps {
 }
 
 const Footer: React.FC<FooterProps> = ({ onNavigate, onSupportClick }) => {
-  // Same logo emblem as used in Navbar for consistency
-  const LogoEmblem = ({ size = 20, color = "black" }: { size?: number, color?: string }) => (
-    <svg width={size} height={size} viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="44" fill="white" />
-      <circle cx="50" cy="50" r="40" fill="none" stroke={color} strokeWidth="6"/>
-      <rect x="40" y="40" width="20" height="20" fill={color}/>
-      <line x1="50" y1="10" x2="50" y2="90" stroke={color} strokeWidth="6" />
-      <line x1="10" y1="50" x2="90" y2="50" stroke={color} strokeWidth="6" />
-      <rect x="42" y="10" width="16" height="10" fill="white" />
-      <rect x="42" y="80" width="16" height="10" fill="white" />
-      <rect x="10" y="42" width="10" height="16" fill="white" />
-      <rect x="80" y="42" width="10" height="16" fill="white" />
-    </svg>
-  );
+  // VOTRE LOGO
+  const customLogo = "https://nagodetransfert.com/wp-content/uploads/2023/03/FB_IMG_1679044436873-72x72.jpg";
 
   return (
     <footer className="bg-brand-light border-t border-gray-200">
@@ -60,15 +47,17 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, onSupportClick }) => {
         {/* Links Grid */}
         <div className="py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 text-brand-black">
           <div className="space-y-6">
-             {/* Clickable Logo Section */}
+             {/* Clickable Logo Section - MODIFIÉ avec votre logo */}
              <div 
                className="flex items-center gap-3 cursor-pointer group w-fit transition-transform hover:scale-105 active:scale-95"
                onClick={() => onNavigate('home')}
              >
                 <div className="bg-white p-1 rounded-xl shadow-sm border border-gray-100 group-hover:shadow-md transition-shadow">
-                  <div className="flex flex-col items-center leading-none p-1">
-                    <LogoEmblem size={24} />
-                  </div>
+                  <img 
+                    src={customLogo} 
+                    alt="Nagode Transfert Logo" 
+                    className="w-10 h-10 object-contain"
+                  />
                 </div>
                 <div className="flex flex-col -space-y-1">
                   <span className="text-xl font-black tracking-tighter text-brand-dark uppercase">Nagode</span>
@@ -93,6 +82,7 @@ const Footer: React.FC<FooterProps> = ({ onNavigate, onSupportClick }) => {
              </div>
           </div>
 
+          {/* ... le reste du code reste EXACTEMENT pareil ... */}
           <div className="space-y-6">
             <h4 className="font-bold text-brand-dark uppercase tracking-wider text-xs">L'entreprise</h4>
             <ul className="space-y-4 text-sm text-gray-500">

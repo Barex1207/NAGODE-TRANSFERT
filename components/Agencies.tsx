@@ -65,7 +65,7 @@ const agenciesData: CountryAgencies[] = [
     country: "Côte d'Ivoire",
     flag: "🇨🇮",
     agencies: [
-      { id: "ci-1", city: "Koumassi", ticketPhone: "70 404 1286", parcelPhone: "70 404 1286", code: "+225", email: "ci@nagodetransfert.com" }
+      { id: "ci-1", city: "Commune de Koumassi", ticketPhone: "70 404 1286", parcelPhone: "70 404 1286", code: "+225", email: "ci@nagodetransfert.com" }
     ]
   }
 ];

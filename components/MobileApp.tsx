@@ -23,7 +23,7 @@ const MobileApp: React.FC = () => {
           {/* Bloc Texte (Gauche) */}
           <div className="text-white space-y-6 max-w-xl">
             <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
-              Téléchargez notre app mobile
+              Téléchargez notre application mobile
             </h2>
             <p className="text-lg md:text-xl text-white/90 font-medium leading-relaxed">
               Réservez, suivez et transférez en toute simplicité <br className="hidden md:block" />

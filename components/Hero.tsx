@@ -9,7 +9,7 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ activeBookingTab, onTabChange }) => {
-  const customBgImage = "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=2000";
+  const customBgImage = "https://nagodetransfert.com/wp-content/uploads/2024/03/new_landing_2023.jpg";
 
   return (
     <div className="relative min-h-screen flex items-center overflow-hidden pt-16">
@@ -32,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({ activeBookingTab, onTabChange }) => {
               <span className="text-[#8A2BE2]">Transférez en toute sécurité</span>
             </h1>
             <p className="text-xl text-white/80 font-medium max-w-lg leading-relaxed">
-              Réservez votre trajet, suivez vos colis, ou effectuez des transferts d'argent facilement avec <span className="font-bold text-white">Nagode Transfert</span>.
+              Réservez votre trajet, suivez vos colis, ou effectuez des transferts d'argent facilement avec <span className="font-bold text-white">NAGODE TRANSFERT</span>.
             </p>
             <div className="flex gap-4">
                <div className="flex -space-x-3">
